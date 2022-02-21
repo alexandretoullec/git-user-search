@@ -1,0 +1,356 @@
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+
+:root {
+    /* colors */
+
+    /* light mode */
+    --clr-blue:212 100% 50%;
+    --clr-grey-light:217 20% 51%;
+    --clr-blue-grey-light:217 35% 45%;
+    --clr-dark-light: 217 21% 21%;
+    --clr-light: 227 100% 98%;;
+    --clr-white: 0 0% 100%;
+
+
+    /* sepcified dark mode */
+    --clr-dark-dark:220 40% 13%;
+    --clr-dark-blue-dark:222 41% 20%;
+
+    
+    /* font-sizes */
+    --fs-900: clamp(5rem,8vw + 1rem,9.375rem);
+    --fs-800: 6.25rem;
+    --fs-700: 3.5rem;
+    --fs-600: 2rem;
+    --fs-500: 1.75rem;
+    --fs-400: 1.3rem;
+    --fs-300: 1rem;
+    --fs-200: 0.875rem;
+    
+    /* font-families */
+    --ff-serif: "Space Mono", serif;
+    --ff-sans-cond: "Barlow Condensed", sans-serif;
+    --ff-sans-normal: "Barlow", sans-serif;
+
+    /* bold */
+    --bold:bold;
+
+}
+
+@media (min-width: 35em) {
+    :root {
+        
+        --fs-800: 5rem;
+        --fs-700: 2.5rem;
+        --fs-600: 1.5rem;
+        --fs-400: 1rem;
+    }
+}
+
+@media (min-width: 45em) {
+    :root {
+        /* font-sizes */
+        --fs-800: 6.25rem;
+        --fs-700: 3.5rem;
+        --fs-600: 2rem;
+        --fs-400: 1.125rem;
+    }
+}
+
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0; 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+/* set up the body */
+body {
+    font-family: var(--ff-sans-normal);
+    font-size: var(--fs-300);
+    color: hsl( var(--clr-dark) );
+    background-color: hsl( var(--clr-white) );
+    line-height: 1.5;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+
+    overflow-x: hidden;
+}
+
+/* make images easier to work with */
+img,
+picutre {
+    max-width: 100%;
+    display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+
+/* general */
+
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* justify-content: left; */
+    gap: var(--gap, 2rem);
+
+}
+
+.color-box{
+    width: 14rem;
+    /* margin: 1rem 1rem; */
+}
+
+ h3{
+    margin: 2rem 0 1rem;
+}
+
+.flex-text{
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+.text-box{
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    
+}
+
+.text-box div{
+    margin-bottom: 2rem;
+}
+
+h2 {
+    margin-bottom: 2rem;
+}
+
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.d-block {
+    display: block;
+}
+
+
+
+.container {
+    padding-inline: 2em;
+    margin-inline: auto;
+    max-width: 80rem;
+}
+
+.grid-container {
+    text-align: center;
+    display: grid;
+    place-items: center;
+    padding-inline: 1rem ;
+}
+
+.grid-container * {
+    max-width: 50ch;
+}
+
+@media (min-width:45rem) {
+    .grid-container{
+        text-align: left;
+        column-gap: var(--container-gap, 2rem);
+        grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 60rem)) minmax(2rem, 1fr);
+    }
+
+    .grid-container > *:first-child {
+        grid-column: 2;
+    }
+    
+    .grid-container > *:last-child {
+        grid-column: 3;
+    }
+    
+    .grid-containe--home{
+        padding-bottom: max(6rem,20vh);
+        align-items: end;
+    }
+    
+}
+
+
+
+.sr-only {
+  position: absolute; 
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px; 
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+
+
+/* light mode */
+.bg-blue { background-color: hsl( var(--clr-blue) );}
+.bg-grey { background-color: hsl( var(--clr-grey-light) );}
+
+.bg-blue-grey { background-color: hsl( var(--clr-blue-grey-light) );}
+.bg-dark-light { background-color: hsl( var(--clr-dark-light) );}
+.bg-light { background-color: hsl( var(--clr-light) );}
+.bg-white { background-color: hsl( var(--clr-white) );}
+
+
+.text-dark { color: hsl( var(--clr-dark-light) );}
+.text-accent { color: hsl( var(--clr-light) );}
+.text-white { color: hsl( var(--clr-white) );}
+.text-blue{color:hsl( var(--clr-blue))};
+
+/* dark mode */
+.bg-dark { background-color: hsl( var(--clr-dark-dark) );}
+.bg-dark-light { background-color: hsl( var(--clr-dark-light) );}
+
+/* typography */
+
+.ff-serif { font-family: var(--ff-serif); } 
+.ff-sans-cond { font-family: var(--ff-sans-cond); } 
+.ff-sans-normal { font-family: var(--ff-sans-normal); } 
+
+.fs-bold{font-weight: var(--bold);}
+
+.letter-spacing-1 { letter-spacing: 4.75px; } 
+.letter-spacing-2 { letter-spacing: 2.7px; } 
+.letter-spacing-3 { letter-spacing: 2.35px; } 
+
+.uppercase { text-transform: uppercase; }
+
+.fs-900 { font-size: var(--fs-900); }
+.fs-800 { font-size: var(--fs-800); }
+.fs-700 { font-size: var(--fs-700); }
+.fs-600 { font-size: var(--fs-600); }
+.fs-500 { font-size: var(--fs-500); }
+.fs-400 { font-size: var(--fs-400); }
+.fs-300 { font-size: var(--fs-300); }
+.fs-200 { font-size: var(--fs-200); }
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+    line-height: 1.1;
+}
+
+.numbered-title {
+    font-family: var(--ff-sans-cond);
+    font-size: var(--fs-500);
+    text-transform: uppercase;
+    letter-spacing: 4.72px; 
+
+}
+
+.numbered-title span {
+    margin-right: 0.5rem;
+    font-weight: 700;
+    color: hsl( var(--clr-dark)/0.25 );
+}
+
+p span{
+    margin-right: 2rem;
+    color: hsl( var(--clr-dark) );
+}
+
+/* ------------------- */
+/* Compontents         */
+/* ------------------- */
+
+/* search */
+
+.fg--search {
+    background: white;
+    position: relative;
+    width: 30rem;
+    
+  }
+  
+  .fg--search input {
+    width: 100%;
+    padding: 20px 60px 20px 20px;
+    display: block;
+  }
+  
+  .fg--search button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 18px 20px;
+    z-index: 2;
+  }
+  
+  .fg--search input:focus + button .fa-search {
+    color: red;
+  }
