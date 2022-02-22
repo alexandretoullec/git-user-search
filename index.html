@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+   <!-- Google fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">    
+
+   <!-- font awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+   <!-- css link -->
+   <link rel="stylesheet" href="index.css">
+  
+  <title>Frontend Mentor | GitHub user search app</title>
+</head>
+<body>
+
+<section class="container">
+
+  <header class="header-section">
+    <h1 class="fs-500 ff-serif fs-bold">devfinder</h1> 
+
+    <div class="switch-container">
+      <h4 class="fs-200 ff-serif profil-bio uppercase switch-text  text-grey ">dark</h4>
+      <button type="button"><img src="./starter-code/assets/icon-moon.svg" alt=""></button>
+    </div>
+  </header>
+
+  <main class="main-section">
+      <section class="section-search">
+        <form class="fg--search-light">
+          <img src="./starter-code/assets/icon-search.svg" alt="">
+          <input type="text" class="input" placeholder="Search Github Username">
+          <button type="submit">Search</button>
+        </form> 
+      </section>
+
+      <section class="results">
+        <img src="./starter-code/assets/profile.png"  alt="" class="img-profile">
+        
+        <section class="results-text">
+          <article class="results__profil-pres">
+            <div class="profil-first">
+              <h1 class="fs-500 ff-serif fs-bold profil-title">The Octocat</h1> 
+              <h3 class="fs-300 ff-serif text-blue profil-email">@octocat</h3>
+            </div>
+            <h4 class="fs-200 ff-serif results__joined-date  text-grey ">Joined 25 Jan 2011</h4>
+          </article>
+
+          <h4 class="fs-200 ff-serif profil-bio  text-grey ">This profile has no bio</h4>
+          
+
+          <div class="detail-block">
+            
+              <div class="repo-cont">
+                <h4 class="fs-200 ff-serif repo-title  text-grey ">Repos</h4>
+                <h1 class="fs-500 ff-serif fs-bold profil-title repo-num">8</h1> 
+              </div>
+              <div class="follower-cont">
+                <h4 class="fs-200 ff-serif follower-title  text-grey ">Followers</h4>
+                <h1 class="fs-500 ff-serif fs-bold profil-title follower-num">3938</h1> 
+              </div>
+              <div class="following-cont">
+                <h4 class="fs-200 ff-serif following-title  text-grey ">Following</h4>
+                <h1 class="fs-500 ff-serif fs-bold profil-title following-num">9</h1> 
+              </div>
+            
+          </div>
+
+          <div class="social-cont">
+            <div class="location">
+              <i><img src="./starter-code/assets/icon-location.svg" alt=""></i>
+              <h4 class="fs-200 ff-serif location-title  text-grey ">San Francisco</h4>
+            </div>
+            <div class="twitter">
+              <i><img src="./starter-code/assets/icon-twitter.svg" alt=""></i>
+              <h4 class="fs-200 ff-serif location-title  text-grey ">Not available</h4>
+            </div>
+            <div class="link">
+              <i><img src="./starter-code/assets/icon-website.svg" alt=""></i>
+              <h4 class="fs-200 ff-serif location-title  text-grey ">https://github.blog</h4>
+            </div>
+            <div class="company">
+              <i><img src="./starter-code/assets/icon-company.svg" alt=""></i>
+              <h4 class="fs-200 ff-serif company-title  text-grey ">San Francisco</h4>
+            </div>
+          </div>
+          </section>
+      </section>
+    </main>
+
+</section>
+
+
+</body>
+</html>

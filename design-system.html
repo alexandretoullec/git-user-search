@@ -3,10 +3,13 @@
         <title>Design system</title>
         
         <!-- Google fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">    
+
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         
-            <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">    
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-         <link rel="stylesheet" href="design.css">
+        <!-- css link -->
+        <link rel="stylesheet" href="design.css">
 
         <style>
             
@@ -67,7 +70,7 @@
                         <p><span class="text-dark">HSL</span> 0°, 0%, 100%</p>
                     </div>
                     <div class="color-box" ;">
-                        <div class="bg-dark text-white ff-serif fs-400" style="padding: 3rem 1rem 1rem; border: 1px solid white;border-radius: 10px;">#141D2F</div>
+                        <div class="bg-dark-blue-dark text-white ff-serif fs-400" style="padding: 3rem 1rem 1rem; border: 1px solid grey;border-radius: 10px;">#141D2F</div>
                         <p><span class="text-dark">RGB</span> 20, 29, 47</p>
                         <p><span class="text-dark">HSL</span> 230°, 35%, 7%</p>
                     </div>
@@ -86,19 +89,19 @@
                     <div class="text-box" style="flex-basis: 100%; ---space: 4rem;">
                         <div> 
                             <p class="text-dark">H1 - Space Mono Bold - 26px - 38px Line Height</p>
-                            <p class="fs-500 ff-serif fs-bold">The Octocat</p> 
+                            <h1 class="fs-500 ff-serif fs-bold">The Octocat</h1> 
                         </div>
                         <div> 
                             <p class="text-dark">H2 - Space Mono Bold - 22px - 33px Line Height</p>
-                            <p class="fs-400 ff-serif fs-bold">Lorem ipsum dolor sit amet</p>
+                            <h2 class="fs-400 ff-seriffs-bold">Lorem ipsum dolor sit amet</h2>
                         </div>
                         <div> 
                             <p class="text-dark">H3 - Space Mono Reg. - 16px - 24px Line Height</p>
-                            <p class="fs-300 ff-serif text-blue">@octocat</p>
+                            <h3 class="fs-300 ff-serif text-blue">@octocat</h3>
                         </div>
                         <div> 
                             <p class="text-dark">H4 - Space Mono Reg - 13px - 20px Line Height</p>
-                            <p class="fs-200 ff-serif">Repos</p>
+                            <h4 class="fs-200 ff-serif  text-grey ">Repos</h4>
                         </div> 
                         
                     
@@ -121,7 +124,7 @@
 
                 <div class="light-search-container flex">
 
-                    <form class="fg--search">
+                    <form class="fg--search-light">
                         <img src="./starter-code/assets/icon-search.svg" alt="">
                         <input type="text" class="input" placeholder="Search Github Username">
                         <button type="submit">Search</button>
@@ -130,6 +133,17 @@
 
                 </div>
                 
+
+                <div class="dark-search-container flex">
+
+                    <form class="fg--search-dark">
+                        <img src="./starter-code/assets/icon-search.svg" alt="">
+                        <input type="text" class="input" placeholder="Search Github Username">
+                        <button type="submit">Search</button>
+                    </form>   
+
+
+                </div>
                 
             </section>
             
