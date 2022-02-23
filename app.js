@@ -1,7 +1,4 @@
 
-  
-
-
 const apiCall = "https://api.github.com/users/";
 
 const form = document.querySelector('#git-user-form');
@@ -19,6 +16,10 @@ const locationTitle = document.querySelector('.location-title');
 const twitterTitle = document.querySelector('.twitter-title');
 const websiteTitle = document.querySelector('.website-title');
 const companyTitle = document.querySelector('.company-title');
+const noRes = document.querySelector('.no-res');
+
+
+
 
 
 async function dataGitHub(user){
@@ -38,10 +39,12 @@ async function dataGitHub(user){
     const website = data.html_url;
     const company = data.company;
 
+    const mess = data.message
 
-    console.log(date);
-    // console.log(email);
-
+    if(mess === "Not Found" ){
+        noRes.style.display="block"
+    }else{
+        noRes.style.display="none"
     //setting 
 
     // Setting img and name
@@ -75,6 +78,7 @@ async function dataGitHub(user){
         twitterTitle.innerText=twitter
     }else{
         twitterTitle.innerText="not available"
+        
     }
 
     if(website){
@@ -110,7 +114,7 @@ async function dataGitHub(user){
 
     let tempDate = new Date(date);
 
-    let day = tempDate.getDay();
+    let day = tempDate.getDate();
 
     let month = tempDate.getMonth()
     month=months[month]
@@ -119,7 +123,7 @@ async function dataGitHub(user){
     
     joined.innerHTML=`Joined ${day} ${month} ${year} `
 
-
+    }
 
 }
 
@@ -133,4 +137,40 @@ form.addEventListener('submit',(e)=>{
     }
     
     
+})
+
+// toggle from light to dark 
+
+
+// switch theme const
+const btnLd = document.querySelector('i');
+
+const h4 = document.querySelectorAll('h4');
+
+const results = document.querySelector('.results');
+const detailBlock = document.querySelector('.detail-block');
+const imageSwitch = document.querySelector('.switch-container i')
+const i = document.querySelectorAll('.social-cont i')
+
+console.log(detailBlock);
+
+btnLd.addEventListener('click',()=>{
+    document.body.classList.toggle("dark-theme");
+    h4.forEach((h)=>{
+        h.classList.toggle("dark-theme")
+    });
+    
+    form.classList.toggle("fg--search-dark");
+    results.classList.toggle("dark-theme");
+    
+    detailBlock.classList.toggle("dark-theme");
+
+    
+    imageSwitch.classList.toggle("dark-theme")
+    
+
+    i.forEach((i)=>{
+        i.classList.toggle("dark-theme")
+    });
+
 })

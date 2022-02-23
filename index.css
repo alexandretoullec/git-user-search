@@ -4,6 +4,10 @@ body{
     background: hsl(var(--clr-light));
 }
 
+h4{
+    color: hsl( var(--clr-grey-light));
+}
+
 .container{
     display: flex;
     align-items: center;
@@ -27,12 +31,19 @@ body{
 .switch-container{
     display: flex;
     gap: 1rem;
+    align-items: center;
+    justify-content: center;
 }
 
-.switch-container button{
-    border: none;
+
+
+.switch-container i{
+    background-image: url('./starter-code/assets/icon-moon.svg');
+    width: 1.5rem;
+    height: 1.5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
     cursor: pointer;
-    background: none;
 }
 
 
@@ -100,5 +111,74 @@ body{
     margin-bottom: 0.5rem;
 }
 
+.location i {
+    background-image: url("./starter-code/assets/icon-location.svg");
+    width: 1rem;
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.twitter i {
+    background-image: url("./starter-code/assets/icon-twitter.svg");
+    width: 1rem;
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+} 
+
+.link i {
+    background-image: url("./starter-code/assets/icon-website.svg");
+    width: 1rem;
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.company i {
+    background-image: url("./starter-code/assets/icon-company.svg");
+    width: 1rem;
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* no results */
 
 
+.no-res{
+    display: none;
+}
+
+/* dark theme */
+
+
+
+body.dark-theme{
+    background: hsl( var(--clr-dark-dark) );
+    color: white;
+
+}
+
+h4.dark-theme{
+    color: white;
+    
+}
+
+
+.results.dark-theme{
+    background: hsl(var(--clr-dark-blue-dark));
+    color:white;
+}
+
+.detail-block.dark-theme{
+    background: hsl( var(--clr-dark-dark) );
+}
+
+.switch-container i.dark-theme{
+    background-image: url("./starter-code/assets/icon-sun.svg");
+}
+
+.social-cont i.dark-theme{
+    color-scheme: white;
+}

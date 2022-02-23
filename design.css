@@ -367,11 +367,33 @@ p span{
       cursor: pointer;
   }
   
-  .fg--search-light input:focus + button .fa-search {
-    color: red;
+
+  /* no results */
+  .no-res{
+      color: #F74646;
+      background: transparent;
+      position: absolute;
+      border: none;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 0.8rem 1.5rem;
+      right: 8rem;
+      top: 0.4rem;
+      
   }
 
+  
+
+
+
+
+  
+
   /* search dark */
+
+  .dark-search-container{
+      margin: 3rem 0;
+  }
 
   .fg--search-dark {
     
@@ -388,7 +410,7 @@ p span{
     display: block;
     border-radius: 15px;
     border: none;
-    box-shadow: 8px 8px 12px #aaa;
+    /* box-shadow: 8px 8px 12px #aaa; */
   }
 
 
@@ -417,6 +439,8 @@ p span{
       cursor: pointer;
   }
   
-  .fg--search-light input:focus + button .fa-search {
+  /* .fg--search-light input:focus + button .fa-search {
     color: red;
-  }
+  } */
+
+  
